@@ -4,8 +4,7 @@
 
 ```bash
 sudo apt update
-sudo apt install nano git -y
-sudo apt install build-essential autoconf automake libxmu-dev -y
+sudo apt install nano git build-essential autoconf automake libxmu-dev -y
 
 ```
 
@@ -47,7 +46,7 @@ git clone https://github.com/hdkhanh462/ns-allinone-2.35-wsl.git
 2. Build NS2:
 
 ```bash
-cd ~/ns-allinone-2.35-wsl/
+cd ~/otp/ns-allinone-2.35-wsl/
 ./install
 
 ```
