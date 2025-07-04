@@ -15,7 +15,6 @@ sudo apt install build-essential autoconf automake libxmu-dev -y
 
 ```bash
 sudo nano /etc/apt/sources.list
-
 ```
 
 2. Add the following line at the end of the file:
@@ -27,7 +26,7 @@ deb http://in.archive.ubuntu.com/ubuntu bionic main universe
 3. Update and install:
 
 ```bash
-sudo apt update 
+sudo apt update
 sudo apt install gcc-4.8 g++-4.8 -y
 
 ```
@@ -39,6 +38,8 @@ sudo apt install gcc-4.8 g++-4.8 -y
 1. Clone the repo:
 
 ```bash
+mkdir ~/otp/
+cd ~/otp/
 git clone https://github.com/hdkhanh462/ns-allinone-2.35-wsl.git
 
 ```
@@ -46,7 +47,7 @@ git clone https://github.com/hdkhanh462/ns-allinone-2.35-wsl.git
 2. Build NS2:
 
 ```bash
-cd ~/ns-allinone-2.35-wsl/ 
+cd ~/ns-allinone-2.35-wsl/
 ./install
 
 ```
@@ -60,15 +61,13 @@ cd ~/ns-allinone-2.35-wsl/
 
 ```bash
 nano ~/.bashrc
-
 ```
 
 2. Add the following lines at the end:
 
 ```bash
-export PATH=$PATH:/root/ns-allinone-2.35/bin:/root/ns-allinone-2.35/tcl8.5.10/unix:/root/ns-allinone-2.35/tk8.5.10/unix
-
-export LD_LIBRARY_PATH=/root/ns-allinone-2.35/otcl-1.14:/root/ns-allinone-2.35/lib
+export PATH=$PATH:/root/otp/ns-allinone-2.35-wsl/bin:/root/otp/ns-allinone-2.35-wsl/tcl8.5.10/unix:/root/otp/ns-allinone-2.35-wsl/tk8.5.10/unix
+export LD_LIBRARY_PATH=/root/otp/ns-allinone-2.35-wsl/otcl-1.14:/root/otp/ns-allinone-2.35-wsl/lib
 ```
 
 ---
@@ -77,12 +76,11 @@ export LD_LIBRARY_PATH=/root/ns-allinone-2.35/otcl-1.14:/root/ns-allinone-2.35/l
 
 ```bash
 source ~/.bashrc
-
 ```
 
 ---
 
-# Using nam in WSL
+# Setup to using nam in WSL
 
 ## Download & Run VcXsrv
 
@@ -109,7 +107,7 @@ export DISPLAY=:0
 Before testing `nam`, confirm X11 works:
 
 ```bash
-sudo apt install x11-apps
+sudo apt install x11-apps -y
 xclock
 
 ```
