@@ -33,8 +33,8 @@ MANDEST	= @prefix@/man
 BLANK	= # make a blank space.  DO NOT add anything to this line
 
 # The following will be redefined under Windows (see WIN32 lable below)
-CC	= @CC@
-CPP	= @CXX@
+CC	= gcc-4.8
+CPP	= g++-4.8
 LINK	= $(CPP)
 LINK_SHLIB = @SHLIB_LD@
 MKDEP	= ./conf/mkdep
@@ -278,10 +278,6 @@ OBJ_CC = \
 	aomdv/aomdv_logs.o aomdv/aomdv.o \
 	aomdv/aomdv_rtable.o aomdv/aomdv_rqueue.o \
 	puma/puma.o \
-        idmidr/generic_cache.o \
-        idmidr/idmidr.o \
-        idmidr/neighborhood_list.o \
-        idmidr/destination_requested_cache.o \
 	mdart/mdart_adp.o mdart/mdart_dht.o mdart/mdart_ndp.o \
 	mdart/mdart_neighbor.o mdart/mdart_queue.o mdart/mdart_table.o \
 	mdart/mdart.o \

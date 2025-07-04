@@ -110,9 +110,7 @@ public:
 	typedef list<_Tp> baseList;
 	LsList() : baseList() {}
 	LsList(const _Tp& x) : baseList(1, x) {}
-	void eraseAll() { 
-		baseList::erase(baseList::begin(), baseList::end()); 
-	}
+	void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
 	LsList<_Tp>& operator= (const LsList<_Tp> & x) {
 		return (LsList<_Tp> &)baseList::operator= (x);
 	}

@@ -43,8 +43,8 @@ MANDEST = @mandir@
 # Define datarootdir as of autoconf 2.60
 datarootdir = @datarootdir@
 
-CC = @CC@
-CPP = @CXX@
+CC = gcc-4.8
+CPP = g++-4.8
 CCOPT = @V_CCOPT@
 MKDEP = ./conf/mkdep
 # Have to be the same as that defined in conf/makefile.win
