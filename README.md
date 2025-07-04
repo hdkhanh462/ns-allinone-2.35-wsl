@@ -46,7 +46,7 @@ git clone https://github.com/hdkhanh462/ns-allinone-2.35-wsl.git
 2. Build NS2:
 
 ```bash
-cd ~/ns-allinone-2.35/ 
+cd ~/ns-allinone-2.35-wsl/ 
 ./install
 
 ```

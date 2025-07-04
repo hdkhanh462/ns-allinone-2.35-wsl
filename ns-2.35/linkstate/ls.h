@@ -110,7 +110,9 @@ public:
 	typedef list<_Tp> baseList;
 	LsList() : baseList() {}
 	LsList(const _Tp& x) : baseList(1, x) {}
-	void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
+	void eraseAll() { 
+		baseList::erase(baseList::begin(), baseList::end()); 
+	}
 	LsList<_Tp>& operator= (const LsList<_Tp> & x) {
 		return (LsList<_Tp> &)baseList::operator= (x);
 	}
@@ -132,7 +134,7 @@ public:
 		return ib.second ? ib.first : baseMap::end();
 	}
 
-	void eraseAll() { erase(baseMap::begin(), baseMap::end()); }
+	void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }
 	T* findPtr(Key key) {
 		iterator it = baseMap::find(key);
 		return (it == baseMap::end()) ? (T *)NULL : &((*it).second);
