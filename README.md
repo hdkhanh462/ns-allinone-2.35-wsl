@@ -3,9 +3,10 @@
 ## Step 1: Install Basic Libraries
 
 ```bash
-sudo apt update 
-sudo apt install nano git -y 
+sudo apt update
+sudo apt install nano git -y
 sudo apt install build-essential autoconf automake libxmu-dev -y
+
 ```
 
 ## Step 2: Install `gcc-4.8` and `g++-4.8`
@@ -14,6 +15,7 @@ sudo apt install build-essential autoconf automake libxmu-dev -y
 
 ```bash
 sudo nano /etc/apt/sources.list
+
 ```
 
 2. Add the following line at the end of the file:
@@ -27,6 +29,7 @@ deb http://in.archive.ubuntu.com/ubuntu bionic main universe
 ```bash
 sudo apt update 
 sudo apt install gcc-4.8 g++-4.8 -y
+
 ```
 
 ---
@@ -37,6 +40,7 @@ sudo apt install gcc-4.8 g++-4.8 -y
 
 ```bash
 git clone https://github.com/hdkhanh462/ns-allinone-2.35-wsl.git
+
 ```
 
 2. Build NS2:
@@ -44,6 +48,7 @@ git clone https://github.com/hdkhanh462/ns-allinone-2.35-wsl.git
 ```bash
 cd ~/ns-allinone-2.35/ 
 ./install
+
 ```
 
 ---
@@ -55,6 +60,7 @@ cd ~/ns-allinone-2.35/
 
 ```bash
 nano ~/.bashrc
+
 ```
 
 2. Add the following lines at the end:
@@ -71,6 +77,7 @@ export LD_LIBRARY_PATH=/root/ns-allinone-2.35/otcl-1.14:/root/ns-allinone-2.35/l
 
 ```bash
 source ~/.bashrc
+
 ```
 
 ---
@@ -104,4 +111,5 @@ Before testing `nam`, confirm X11 works:
 ```bash
 sudo apt install x11-apps
 xclock
+
 ```
